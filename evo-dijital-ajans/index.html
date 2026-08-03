@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evo Dijital Ajans | Dijital Çözümler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .services-section {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-top: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .services-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            margin-top: 60px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-section {
+                padding: 40px 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Evo Dijital Ajans</h1>
+            <p>Dijital Dünyada Profesyonel Çözümler</p>
+        </header>
+
+        <section class="services-section">
+            <h2>Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Tasarımı</h3>
+                    <p>Modern, responsive ve kullanıcı dostu web siteleri tasarlıyoruz. Markanızı dijital dünyada en iyi şekilde temsil ediyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Grafik Tasarım</h3>
+                    <p>Yaratıcı ve etkileyici grafik tasarımlarla markanızın görsel kimliğini güçlendiriyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Kurumsal Kimlik</h3>
+                    <p>Logo, kartvizit, antetli kağıt ve tüm kurumsal materyallerinizle profesyonel bir imaj oluşturuyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Logo Tasarımı</h3>
+                    <p>Markanızı temsil edecek özgün ve akılda kalıcı logo tasarımları yapıyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Sosyal Medya Yönetimi</h3>
+                    <p>Sosyal medya hesaplarınızı profesyonelce yöneterek hedef kitlenizle etkili iletişim kurmanızı sağlıyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>SM Danışmanlığı</h3>
+                    <p>Sosyal medya stratejileri konusunda uzman danışmanlık hizmeti veriyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📹</div>
+                    <h3>Video & Fotoğraf Çekimi</h3>
+                    <p>Profesyonel video ve fotoğraf çekimleri ile markanızı en iyi şekilde gösteriyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Video & Foto Edit</h3>
+                    <p>Çekilen içerikleri profesyonelce düzenleyerek mükemmel sonuçlar elde ediyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚁</div>
+                    <h3>Drone Çekimi</h3>
+                    <p>Havadan profesyonel drone çekimleri ile farklı perspektifler sunuyoruz.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Evo Dijital Ajans. Tüm Hakları Saklıdır.</p>
+            <p style="margin-top: 10px;">Enver Abi için özel olarak hazırlandı ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
