@@ -22,7 +22,7 @@
                     <li><a href="#services">Hizmetler</a></li>
                     <li><a href="#about">Hakkımızda</a></li>
                     <li><a href="#portfolio">Portfolyo</a></li>
-                    <li><a href="#pricing">Fiyatlar</a></li>
+                    <li><a href="#pricing">Paketler</a></li>
                     <li><a href="#contact" class="btn-primary">İletişim</a></li>
                 </ul>
                 <div class="hamburger">
@@ -189,10 +189,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-users"></i>
-                        <span>Yaratıcı Ekibimiz</span>
-                    </div>
+                    <img src="images/about.jpg" alt="Yaratıcı Ekibimiz" class="about-img-styled">
                 </div>
             </div>
         </div>
@@ -237,12 +234,10 @@
                 </div>
                 <div class="portfolio-item" data-category="social">
                     <div class="portfolio-image">
-                        <div class="placeholder-img">
-                            <i class="fab fa-instagram"></i>
-                        </div>
+                        <img src="images/portfolio1.jpg" alt="Sosyal Medya Kampanyası" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
-                            <h4>Instagram Kampanyası</h4>
-                            <p>Sosyal Medya</p>
+                            <h4>Sosyal Medya Kampanyası</h4>
+                            <p>Grafik & Sosyal Medya</p>
                         </div>
                     </div>
                 </div>
@@ -287,17 +282,15 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Fiyat Paketlerimiz</h2>
-                <p class="section-subtitle">Her bütçeye uygun çözümler</p>
+                <h2 class="section-title">Hizmet Paketlerimiz</h2>
+                <p class="section-subtitle">Projenize özel esnek paket seçenekleri</p>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Başlangıç</h3>
-                        <div class="price">
-                            <span class="currency">₺</span>
-                            <span class="amount">2.500</span>
-                            <span class="period">/proje</span>
+                        <div class="price-custom">
+                            <span class="custom-price-tag">Teklif Alın</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
@@ -308,16 +301,14 @@
                         <li class="disabled"><i class="fas fa-times"></i> Video Çekimi</li>
                         <li class="disabled"><i class="fas fa-times"></i> Google Ads</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Seç</a>
+                    <a href="#contact" class="btn btn-outline">Teklif Alın</a>
                 </div>
                 <div class="pricing-card popular">
                     <div class="popular-badge">En Popüler</div>
                     <div class="pricing-header">
                         <h3>Profesyonel</h3>
-                        <div class="price">
-                            <span class="currency">₺</span>
-                            <span class="amount">5.000</span>
-                            <span class="period">/proje</span>
+                        <div class="price-custom">
+                            <span class="custom-price-tag">Teklif Alın</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
@@ -328,15 +319,13 @@
                         <li><i class="fas fa-check"></i> 1 Video Edit</li>
                         <li class="disabled"><i class="fas fa-times"></i> Google Ads Yönetimi</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Seç</a>
+                    <a href="#contact" class="btn btn-primary">Teklif Alın</a>
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Kurumsal</h3>
-                        <div class="price">
-                            <span class="currency">₺</span>
-                            <span class="amount">10.000</span>
-                            <span class="period">/proje</span>
+                        <div class="price-custom">
+                            <span class="custom-price-tag">Teklif Alın</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
@@ -347,10 +336,10 @@
                         <li><i class="fas fa-check"></i> Drone Çekimi + Video Edit</li>
                         <li><i class="fas fa-check"></i> Google Ads Kurulumu</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Seç</a>
+                    <a href="#contact" class="btn btn-outline">Teklif Alın</a>
                 </div>
             </div>
-            <p class="pricing-note">* Özel projeler için lütfen iletişime geçiniz. Fiyatlar KDV hariçtir.</p>
+            <p class="pricing-note">* Projenizin kapsamına ve ihtiyaçlarınıza göre en uygun fiyat teklifi sunulmaktadır.</p>
         </div>
     </section>
 
@@ -468,31 +457,36 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnpajjoa" method="POST">
+                    <!-- FormSubmit / Formspree Konfigürasyonu -->
+                    <input type="hidden" name="_subject" value="Evo Dijital - Yeni İletişim Formu Mesajı">
+                    <input type="hidden" name="_template" value="table">
+                    
                     <div class="form-group">
-                        <input type="text" placeholder="Adınız Soyadınız" required>
+                        <input type="text" name="name" placeholder="Adınız Soyadınız" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="E-posta Adresiniz" required>
+                        <input type="email" name="email" placeholder="E-posta Adresiniz" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Telefon Numaranız">
+                        <input type="tel" name="phone" placeholder="Telefon Numaranız">
                     </div>
                     <div class="form-group">
-                        <select>
+                        <select name="service">
                             <option value="">Hizmet Seçiniz</option>
-                            <option value="web">Web Tasarımı</option>
-                            <option value="graphic">Grafik Tasarım</option>
-                            <option value="branding">Kurumsal Kimlik</option>
-                            <option value="social">Sosyal Medya Yönetimi</option>
-                            <option value="video">Video & Fotoğraf</option>
-                            <option value="google">Google Ads</option>
+                            <option value="Web Tasarımı">Web Tasarımı</option>
+                            <option value="Grafik Tasarım">Grafik Tasarım</option>
+                            <option value="Kurumsal Kimlik">Kurumsal Kimlik</option>
+                            <option value="Sosyal Medya Yönetimi">Sosyal Medya Yönetimi</option>
+                            <option value="Video & Fotoğraf">Video & Fotoğraf</option>
+                            <option value="Google Ads">Google Ads</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Mesajınız" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full">Gönder</button>
+                    <div id="formStatus" style="margin-top: 1rem; display: none; text-align: center; font-weight: 500;"></div>
                 </form>
             </div>
         </div>

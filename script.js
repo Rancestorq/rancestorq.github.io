@@ -96,32 +96,61 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Contact Form Submission
     const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Get form values
-            const formData = new FormData(this);
-            
-            // Simulate form submission
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
             
             submitButton.textContent = 'Gönderiliyor...';
             submitButton.disabled = true;
+            if (formStatus) {
+                formStatus.style.display = 'none';
+            }
             
-            setTimeout(() => {
-                // Show success message
-                alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
+            const actionUrl = this.getAttribute('action');
+            const formData = new FormData(this);
+            
+            try {
+                const response = await fetch(actionUrl, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
                 
-                // Reset form
-                this.reset();
+                if (response.ok) {
+                    if (formStatus) {
+                        formStatus.style.display = 'block';
+                        formStatus.style.color = '#10B981';
+                        formStatus.textContent = '✓ Mesajınız başarıyla iletildi! En kısa sürede dönüş yapacağız.';
+                    } else {
+                        alert('Mesajınız başarıyla gönderildi!');
+                    }
+                    this.reset();
+                } else {
+                    throw new Error('Gönderim hatası');
+                }
+            } catch (error) {
+                // Fallback direct submit if CORS or service requires standard form post
+                if (actionUrl && !actionUrl.includes('YOUR_EMAIL_HERE')) {
+                    this.submit();
+                    return;
+                }
                 
-                // Restore button
+                if (formStatus) {
+                    formStatus.style.display = 'block';
+                    formStatus.style.color = '#EF4444';
+                    formStatus.textContent = '⚠️ E-posta servisi henüz yapılandırılmadı. Lütfen FormSubmit veya Formspree mail adresinizi ekleyin.';
+                }
+            } finally {
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
-            }, 1500);
+            }
         });
     }
     
